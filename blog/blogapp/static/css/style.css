@@ -1,0 +1,106 @@
+
+
+/* Style for home page*/
+
+html,
+body{
+    border-style: solid;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+}
+h2{
+    font-weight: lighter;
+}
+a{
+    text-decoration: none;
+}
+.github-logo:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.date{
+    color: rgb(132, 132, 132);
+}
+.blog-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.blog{
+    min-width: 100%;
+    margin-block: 1em;
+    border-style: dashed;
+    padding: 1em;
+}
+
+
+
+.blog:hover{
+    transform: scale(1.009);
+    cursor: pointer;
+}
+.container{
+    width: 50%;
+    min-height: 50vh;
+    height: auto;
+    margin-block: 4em;
+    margin-inline:auto;
+
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header:hover{
+    transform: none;
+    cursor: default;
+}
+
+/*Style for blog view */
+.blog-display{
+    padding: 1em;
+    width: 100%;
+}
+.blog-title{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.blog-text p{
+    font-size: large;
+    line-height: 2em;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 1em;
+    border-radius: 4px;
+    width: 2em;
+    margin-inline: auto;
+}
+
+a:hover{
+    transform: scale(1.03);
+}
+.blog-display
+{
+    border-style: dashed;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}   
+
+.blog-text p img {
+    object-fit: contain;
+    max-width: 100%;
+    height: auto;
+    width: 1020px !important;
+    height: 600px !important;
+}
