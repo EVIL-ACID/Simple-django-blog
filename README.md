@@ -12,29 +12,29 @@
 # Set up
 <br/>
 
-## You will need to install dependencies for this to work.
-
-> pip install -r requirements.txt
-
-
-## CD to the blog directory and run the following migrations 
 ```
+CD into the projects directory
+pipenv shell
 cd blog
-
-python manage.py makemigrations
-
-python manage.py migrate
 ```
 
+## Installing all dependencies.
+
+```
+pip install -r requirements.txt
+```
+## Migrations 
+```
+ python manage.py migrate
+ python manage.py makemigrations blogapp
+ python manage.py migrate blogapp
+```
 ## Create a super user to be able to create blog posts.
-
+```
+ python manage.py createsuperuser
+```
+## Run server
 
 ```
-python manage.py createsuperuser
-```
-
-## Run the server
-
-```
-python manage.py runserver
+ manage.py ruserver
 ```
