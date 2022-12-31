@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <title>Blogs</title>
+</head>
+
+<html>
+
+    <body >
+
+        <div class="container">
+            <div class="blog-wrapper">
+                <div class="blog header" onclick="location.href='https://github.com/EVIL-ACID'">
+                    {% with name="Your Name"%}   
+                        <h2>Author : {{name}}</h2>  
+                    {% endwith %}
+                        <img class="github-logo" src="{% static '/images/GitHub_Logo.png'%}" alt="Github logo" width="164" height="64">
+                </div> 
+                    {% for blog in blog_list %}
+                        <div class="blog" onclick="location.href='{{blog.slug}}'">
+                            <h2>{{blog.title}}</h2>
+                            <p class="body">{{blog.description|safe}}</p>
+                            <p class="date">{{blog.create_date}}</p>
+                        </div> 
+                        {% empty %}
+                            <h1>No blogs</h1>
+                    {% endfor %}
+    
+            </div>
+        </div>
+    </body>
+</html>

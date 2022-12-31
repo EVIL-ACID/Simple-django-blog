@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <title>{{blog_content.title}}</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="blog-display">
+            <h1 class="blog-title">{{blog_content.title|safe}}</h1>
+            <div class="blog-text">
+                <p>
+                    {{blog_content.content|safe}}
+                </p>
+            </div>
+            <a href={% url 'index' %}><<<</a>
+        </div>
+    </div>
+</body>
+</html>
